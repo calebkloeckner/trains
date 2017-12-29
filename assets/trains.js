@@ -57,9 +57,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     console.log(firstTrain);
 
     // let trainStartPretty = moment().hours(firstTrain, "minutes");
-    
-    let everyTrain = moment().hour(firstTrain[0]).minutes(trainFreq[0]).format("HH:mm");
-    let whatsNext = firstTrain + everyTrain;
+    let everyTrain = moment().diff(firstTrain + trainFreq).format("HH:mm");
 
     console.log(everyTrain);
 
@@ -78,7 +76,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     
 
     
-    $("#train-table").append("<tr><td>" + anotherTrain + "</td><td>" + trainDest + "</td><td>" + trainFreq + "</td><td>" + whatsNext +  "</td><td>" + finalTime);  
+    $("#train-table").append("<tr><td>" + anotherTrain + "</td><td>" + trainDest + "</td><td>" + trainFreq + "</td><td>" + everyTrain +  "</td><td>" + finalTime);  
     
 });
 
