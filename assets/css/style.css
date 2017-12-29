@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(216, 253, 253) !important;
+}
+
+#title {
+    color: white;
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: black !important;
+}
+
+#train-table {
+    color: rgb(150, 2, 2);
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+}
+
+#train-table th {
+    font-size: 20px;
+    color: rgb(14, 0, 136);
+    text-align: center;
+    font-family: 'Spectral SC', serif;
+}
